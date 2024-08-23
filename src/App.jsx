@@ -1,10 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import { Button } from '@mui/material';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import LoginPage from './page/login/LoginPage';
+import MyDashborad from './page/home/MyDashborad';
 
 function App() {
   return (
-    <Button variant="contained">Contained</Button>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={LoginPage} />
+        <Route exact path='/home' component={MyDashborad} />
+
+      </Switch>
+    </BrowserRouter>
   );
 }
 
